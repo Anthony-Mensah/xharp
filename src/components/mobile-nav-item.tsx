@@ -27,7 +27,13 @@ const MobileNavItem: React.FC<MobileNavItemProps> = ({
         {/* icon */}
         <i className={`text-[20px] ${icon}`}></i>
         {/* label */}
-        <small>{label}</small>
+        <small
+          className="text-xs sm:text-sm md:text-base lg:text-lg
+    truncate
+    block"
+        >
+          {label}
+        </small>
       </main>
     </Link>
   );

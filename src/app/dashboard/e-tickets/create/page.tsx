@@ -98,7 +98,7 @@ const CreateEtiketPage = () => {
               <Image src={add} alt="add" sizes="100vw" width={50} height={50} />
               <div className="flex flex-col h-[37px]">
                 <p>Upload event image</p>
-                <p className="text-muted">Recommended : 400px400px</p>
+                <p className="text-muted">Recommended : 400x400px</p>
               </div>
             </label>
 
