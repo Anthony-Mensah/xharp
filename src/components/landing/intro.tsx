@@ -1,11 +1,12 @@
 "use client";
 
-import { intro} from "@/assests/images";
+import { intro } from "@/assests/images";
 import { sponsors } from "@/assests/images/partners";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInBasicPreset } from "@/utils/motion-presets";
 import LandingNavBar from "../landing-nav-bar";
+import Link from "next/link";
 
 const Intro = () => {
   return (
@@ -28,10 +29,12 @@ const Intro = () => {
             profitable, and inclusive events.
           </p>
           {/* button */}
-          <button className="bg-[#FF4B07] flex items-center justify-center w-[178px] min-h-10 rounded-full p-2.5 space-x-1 text-background">
-            <span>Get In Touch</span>
-            <i className="ri-arrow-right-s-line"></i>
-          </button>
+          <Link href={"/dashboard/e-tickets"}>
+            <button className="bg-[#FF4B07] flex items-center justify-center w-[178px] min-h-10 rounded-full p-2.5 space-x-1 text-background">
+              <span>Get In Touch</span>
+              <i className="ri-arrow-right-s-line"></i>
+            </button>
+          </Link>
         </motion.div>
         {/* image */}
         <motion.div {...fadeInBasicPreset} className="app-container">
