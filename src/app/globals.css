@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Gambarino";
+  src: url("/fonts/Gambarino") format("otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* accent */
+  --accent: #f7f7f7;
+
+  /* muted */
+  --muted: #475467;
+
+  /* border */
+  --border: #e1e4ea;
+
+  /* Typography tokens */
+  /* buttons */
+  --font-button-weight: 500;
+  --font-button-style: medium;
+  --font-button-size: 14px;
+  --font-button-line-height: 20px;
+  --font-button-letter-spacing: -0.6%;
+
+  /* header */
+  --font-header-weight: 500;
+  --font-header-style: medium;
+  --font-header-size: 24px;
+  --font-header-line-height: 24px;
+  --font-header-letter-spacing: -1.5%;
+
+  /* body */
+  --font-body-weight: 500;
+  --font-body-style: medium;
+  --font-body-size: 16px;
+  --font-body-line-height: 20px;
+  --font-body-letter-spacing: -0.6%;
+
+  /* subtext */
+  --font-subtext-weight: 400;
+  --font-subtext-style: normal;
+  --font-subtext-size: 12px;
+  --font-subtext-line-height: 16px;
+  --font-subtext-letter-spacing: 0%;
+}
+
+@theme inline {
+  /* color theme */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --font-instrument: var(--font-instrument-serif);
+  --font-inter: var(--font-inter);
+  --font-gambarino: "Gambarino", serif;
+
+  /* Semantic mappings */
+  --font-button: var(--font-button-family);
+  --font-header: var(--font-header-family);
+  --font-body: var(--font-body-family);
+  --font-subtext: var(--font-subtext-family);
+}
+
+@layer base {
+  body {
+    @apply font-inter bg-background text-foreground;
+  }
+  label {
+    @apply font-medium text-[14px] leading-5;
+  }
+}
+@layer utilities {
+  .hover-effect {
+    @apply hover:bg-accent transition-all duration-200 cursor-pointer;
+  }
+  .active-nav {
+    @apply h-5 w-1 rounded-tr-sm rounded-br-sm bg-foreground;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  .form-input {
+    @apply w-full pl-3 p-2.5 border border-border rounded-[10px] min-h-10 focus:outline-none focus:ring-2 focus:ring-border transition-all duration-200;
+  }
+  .header {
+    @apply font-gambarino text-[30px] lg:text-[50px] leading-[106%] tracking-normal lg:h-[106px] lg:w-[480px];
+  }
+}
+
+@layer components {
+  .app-container {
+    @apply w-full px-4 md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto;
+  }
+
+  .tab {
+    @apply w-[189px] min-h-9 bg-accent flex space-x-1.5 rounded-[10px] p-1;
+  }
+  .tab-item {
+    @apply rounded-md p-1 flex justify-center items-center flex-1 min-h-7;
+  }
+  .btn {
+    @apply w-[149px] h-8 rounded-[10px] border p-2.5 space-x-1 flex items-center justify-center bg-foreground text-background;
+  }
+}
+
+button {
+  font-family: var(--font-button-family);
+  font-weight: var(--font-button-weight);
+  font-style: var(--font-button-style);
+  font-size: var(--font-button-size);
+  line-height: var(--font-button-line-height);
+  letter-spacing: var(--font-button-letter-spacing);
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-header-family);
+  font-weight: var(--font-header-weight);
+  font-style: var(--font-header-style);
+  font-size: var(--font-header-size);
+  line-height: var(--font-header-line-height);
+  letter-spacing: var(--font-header-letter-spacing);
+}
+
+p {
+  font-family: var(--font-body-family);
+  font-weight: var(--font-body-weight);
+  font-style: var(--font-body-style);
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-line-height);
+  letter-spacing: var(--font-body-letter-spacing);
+}
+
+small {
+  font-family: var(--font-subtext-family);
+  font-weight: var(--font-subtext-weight);
+  font-style: var(--font-subtext-style);
+  font-size: var(--font-subtext-size);
+  line-height: var(--font-subtext-line-height);
+  letter-spacing: var(--font-subtext-letter-spacing);
+}
+
+.debug {
+  border: 2px solid blue;
+}
+.debug-1 {
+  border: 2px solid red;
+}
+
+i {
+  font-size: 20px;
+}
+/* global transition for smooth animation */
+* {
+  transition: all 0.3s ease-in-out;
+}
