@@ -26,7 +26,7 @@ const CreateEtiketPage = () => {
         {/* main content */}
         <main className="flex-1 app-container flex flex-col space-y-5 overflow-y-auto items-center scrollbar-hide mt-5">
           {/* title */}
-          <div className="flex flex-col space-y-1 min-h-[84px] md:w-[425px] mx-auto">
+          <div className="flex flex-col space-y-1 min-h-[84px] md:w-[425px] mx-auto ">
             <span className="font-instrument text-[32px] leading-8 text-center font-medium">
               Basic Event Details
             </span>
@@ -69,7 +69,7 @@ const CreateEtiketPage = () => {
                 <input
                   type="text"
                   id="custom-url"
-                  className="border-border rounded-[10px] border-l h-full min-w-[350] px-3 py-2.5 focus:outline-none"
+                  className="border-border rounded-[10px] border-l h-full w-full px-3 py-2.5 focus:outline-none"
                   placeholder="your custom name"
                 />
               </div>
