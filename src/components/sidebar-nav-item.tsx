@@ -4,7 +4,6 @@ import Link from "next/link";
 import React from "react";
 
 type SidebarNavItemProps = {
-  // define props here
   label: string;
   icon: string;
   href?: string;

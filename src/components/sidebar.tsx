@@ -1,7 +1,24 @@
 import { avatar, xharpLogo } from "@/assests/images";
 import Image from "next/image";
 import SidebarNavItem from "./sidebar-nav-item";
-
+const navItems = [
+  { label: "E-tickets", icon: "ri-ticket-line", href: "/dashboard/e-tickets" },
+  {
+    label: "Donations",
+    icon: "ri-hand-heart-line",
+    href: "/dashboard/e-tickets",
+  },
+  {
+    label: "Event Pay",
+    icon: "ri-coin-line",
+    href: "/dashboard/e-tickets",
+  },
+  {
+    label: "Settings",
+    icon: "ri-settings-4-line",
+    href: "/dashboard/e-tickets",
+  },
+];
 const Sidebar = () => {
   return (
     <section className="h-full flex-col w-[249px] hidden md:flex border-r-2 border-accent">
@@ -16,10 +33,14 @@ const Sidebar = () => {
         />
       </header>
       <main className="flex-1 flex flex-col space-y-1 h-full overflow-y-auto">
-        <SidebarNavItem label="E-tickets" icon="ri-ticket-line" />
-        <SidebarNavItem label="Donations" icon="ri-hand-heart-line" />
-        <SidebarNavItem label="Event Pay" icon="ri-coin-line" />
-        <SidebarNavItem label="Settings" icon="ri-settings-4-line" />
+        {navItems.map((item) => (
+          <SidebarNavItem
+            key={item.label}
+            label={item.label}
+            icon={item.icon}
+            href={item.href}
+          />
+        ))}
       </main>
 
       <footer className="border-t-2 border-accent flex justify-between items-center">
