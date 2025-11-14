@@ -43,7 +43,7 @@ const Sidebar = () => {
         ))}
       </main>
 
-      <footer className="border-t-2 border-accent flex justify-between items-center">
+      <footer className="border-t-2 border-accent flex justify-between items-center pb-1">
         <main className="flex space-x-3 p-3 items-center justify-between min-h-16 w-full hover-effect rounded-lg">
           {/* avatar */}
           <Image
