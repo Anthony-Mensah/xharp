@@ -14,6 +14,7 @@ const ETicketPage = () => {
   return (
     <>
       <section className="flex flex-col h-full app-container">
+        {/* e-ticket page header, ie logo and tabs */}
         <header className="flex items-center justify-between md:py-5">
           <h1>E-tickets</h1>
           {/* upcoming and past tabs */}
@@ -36,6 +37,7 @@ const ETicketPage = () => {
             </button>
           </aside>
         </header>
+        {/* main content */}
         <main className="flex-1 flex md:overflow-y-auto flex-col justify-center md:justify-start items-center">
           <EmptyStareCard
             image={calendar}

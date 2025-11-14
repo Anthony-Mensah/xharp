@@ -1,7 +1,6 @@
 "use client";
 import { avatar, xharpLogo } from "@/assests/images";
 import Image from "next/image";
-import React from "react";
 
 const MobileHeader = () => {
   return (

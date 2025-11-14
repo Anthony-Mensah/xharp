@@ -9,6 +9,7 @@ import solution from "@/assests/images/solution.png";
 import status from "@/assests/images/status.png";
 import medium from "@/assests/images/medium.png";
 import globe from "@/assests/images/globe.png";
+import statusGreen from "@/assests/images/status-green.png";
 export {
   xharpLogo,
   avatar,
@@ -21,4 +22,5 @@ export {
   status,
   medium,
   globe,
+  statusGreen,
 };

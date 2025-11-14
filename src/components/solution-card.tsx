@@ -1,4 +1,4 @@
-import { status } from "@/assests/images";
+import { status, statusGreen } from "@/assests/images";
 import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -45,7 +45,7 @@ const SolutionCard: React.FC<TSolutionCardProps> = ({
 
       {/* status icon (always visible, same position) */}
       <Image
-        src={status}
+        src={infoMode ? statusGreen : status}
         alt="status"
         sizes="100vw"
         width={43}

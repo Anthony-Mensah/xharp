@@ -1,4 +1,30 @@
+# Xharp Project
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## My Approach
+
+I structured the project using the Next.js App Router to take advantage of server and client components although this project is client side only.  
+For styling, I used Tailwind CSS and framer motion presets to create reusable animations for fade‑in effects.  
+I focused on keeping components modular and semantic so they can scale easily.
+
+## Challenges Faced
+
+- **Git conflicts with README.md**: When pushing to GitHub, I ran into non‑fast‑forward errors because both local and remote had different README commits.
+- **Rebase confusion**: I got stuck in a rebase state where files seemed to disappear.
+- **Client vs Server components**: Adding `"use client"` everywhere caused metadata errors in Next.js.
+- Couldn’t find some of the required images for the project on figma.
+- Had unnecessary imports in some files which made the codebase less clean.
+- Needed to improve SEO by adding metadata but had to figure out the correct Next.js approach.
+
+## How I Solved Them
+
+- For Git conflicts, I used `git pull --rebase` and resolved the README conflict manually.
+- When rebase got stuck, I checked `git status` and used `git rebase --continue` or `git rebase --abort` to recover.
+- For Next.js client components, I only added `"use client"` to top‑level interactive components instead of layouts/pages, which solved the metadata issue.
+- Reused available images where possible and substituted missing ones with suitable alternatives to keep the project consistent.
+- Removed unnecessary imports to keep the codebase clean, reduce warnings, and improve readability.
+- Added metadata using Next.js’s built‑in metadata configuration in the App Router to improve SEO and ensure pages have proper titles and descriptions.
 
 ## Getting Started
 

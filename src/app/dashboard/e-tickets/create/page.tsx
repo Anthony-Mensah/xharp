@@ -2,7 +2,6 @@
 import { add, xharpLogo } from "@/assests/images";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const CreateEtiketPage = () => {
   return (
@@ -24,7 +23,6 @@ const CreateEtiketPage = () => {
             </Link>
           </header>
         </section>
-        {/* <hr className="border-b border-border" /> */}
         {/* main content */}
         <main className="flex-1 app-container flex flex-col space-y-5 overflow-y-auto items-center scrollbar-hide mt-5">
           {/* title */}
@@ -37,7 +35,7 @@ const CreateEtiketPage = () => {
               key highlights.
             </p>
           </div>
-          {/* form */}
+          {/* create event form */}
           <form className="md:w-[515px] w-full min-h-[715px] space-y-8">
             {/* event name */}
             <aside className="w-full flex flex-col min-h-16 space-y-1">

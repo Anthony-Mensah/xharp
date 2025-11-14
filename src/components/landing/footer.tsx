@@ -41,7 +41,7 @@ const Footer = () => {
       </main>
       {/* footer */}
       <main className="flex items-center justify-between app-container min-h-6 ">
-        <p>© 2025 Xharp Event Technologies LTD. </p>
+        <span className="text-[14px] sm:text-[16px]">© 2025 Xharp Event Technologies LTD.</span>
         {/* social media icons */}
         <div className="flex items-center justify-center gap-[9px]">
           {/* linkedin */}

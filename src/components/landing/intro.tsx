@@ -3,7 +3,6 @@
 import { intro} from "@/assests/images";
 import { sponsors } from "@/assests/images/partners";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeInBasicPreset } from "@/utils/motion-presets";
 import LandingNavBar from "../landing-nav-bar";
